@@ -2,7 +2,8 @@ pipeline {
     agent any 
     stages {
         stage('----clean----') { 
-            steps {			
+            steps {
+	    				sh "cd /var/lib/jenkins/workspace/pipelinedemo@tmp/"
 	    				sh "rm -rf my-app"
 	    				sh "git clone git@github.com:sksravankumar/my-app.git"
 					sh "mvn clean"
