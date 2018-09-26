@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('----clean----') { 
             steps {			
-	    				sh "git clone https://github.com/sksravankumar/my-app/edit/master/my-app.git"
+	    				sh "git clone git@github.com:sksravankumar/my-app.git"
 					sh "mvn clean"
             }
         }
