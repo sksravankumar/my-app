@@ -3,10 +3,9 @@ pipeline {
     stages {
         stage('----clean----') { 
             steps {
-	    				sh "cd /var/lib/jenkins/workspace/pipelinedemo@tmp/"
 	    				sh "rm -rf my-app"
 	    				sh "git clone git@github.com:sksravankumar/my-app.git"
-					sh "mvn clean"
+					mvn -version
             }
         }
         stage('------Test-----') { 
