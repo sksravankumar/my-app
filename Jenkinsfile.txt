@@ -5,7 +5,7 @@ pipeline {
             steps {
 	    				sh "rm -rf my-app"
 	    				sh "git clone git@github.com:sksravankumar/my-app.git"
-					mvn -version
+					sh "mvn -version"
             }
         }
         stage('------Test-----') { 
